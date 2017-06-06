@@ -1,0 +1,30 @@
+/*package com.study.wangluopachong;
+
+public class httpTest {
+    public static void main(String[] args) throws IOException {
+        HttpClient client = new DefaultHttpClient();   //初始化httpclient
+        String personalUrl="http://www.autohome.com.cn/beijing/";     //指定一个种子url
+        HttpGet postMethod = new HttpGet(personalUrl);   //post方法请求
+        System.out.println("postMethod====="+ postMethod+"=====");
+        HttpGet getMethod = new HttpGet(personalUrl);       //  get方法请求
+        System.out.println("Method======"+getMethod+"=====");
+        HttpResponse response = new BasicHttpResponse(HttpVersion.HTTP_1_1,
+                HttpStatus.SC_OK, "OK");                        //初始化response        
+        response = client.execute(getMethod);                   //执行响应
+        System.out.println("response========"+response+"=====");
+        int StatusCode = response.getStatusLine().getStatusCode(); //获取响应状态码
+        System.out.println("StatusCode===="+StatusCode+"=====");
+        System.out.println(response);
+        if(StatusCode == 200){                          //状态码200表示响应成功
+            //获取实体内容
+            String entity = EntityUtils.toString (response.getEntity(),"utf-8");
+            //输出实体内容
+            System.out.println(entity);
+            EntityUtils.consume(response.getEntity());       //消耗实体
+        }else {
+            //关闭HttpEntity的流实体
+            EntityUtils.consume(response.getEntity());        //消耗实体
+        }
+    }
+
+}*/
